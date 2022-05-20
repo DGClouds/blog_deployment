@@ -31,7 +31,10 @@ password=your_mysql_password
 4. `cd /opt/blog_deployment/blog_backup`
 5. `python3 -m venv venv`
 6. `source /opt/blog_deployment/blog_backup/venv/bin/activate`
-7. `pip3 install -r requirements.txt`
+7. `pip3 install -r requirement.txt`
+8. `cp blog_backup.service /lib/systemd/system/`
+9. `systemctl enable blog_backup.service`
+10. run this service now and check running status: `systemctl start blog_backup && systemctl status blog_backup.service`
 
 ## unittest
 `python3 -m unittest discover`

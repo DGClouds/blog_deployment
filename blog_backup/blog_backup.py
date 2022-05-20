@@ -41,6 +41,9 @@ def upload_to_s3():
         else:
             break
 
+def clean_up():
+    os.system(f"rm {TMP_BACKUP_LOCATION}")
+
 def main():
     # main loop
     logger.debug(os.environ.items())
@@ -56,9 +59,11 @@ def main():
             
             backup_mysql()
             upload_to_s3()
+            clean_up()
             
             pervious_exec_time = datetime.datetime.now()
         time.sleep(3600) # 1h
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     main()

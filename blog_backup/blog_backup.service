@@ -15,7 +15,7 @@ Environment=BACKUP_S3_ACCESS_KEY=
 Environment=BACKUP_BUCKET_NAME=
 Environment=BACKUP_KEY_PREFIX=wordpress_db_
 Environment=BACKUP_DB_NAME=wordpress
-ExecStart=/bin/bash -c "source blog_backup/venv/bin/activate && python3 src/wordgene/services/gpt_query_service.py"
+ExecStart=/bin/bash -c "source blog_backup/venv/bin/activate && python3 blog_backup/blog_backup.py"
 
 [Install]
 WantedBy=multi-user.target
