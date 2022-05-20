@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyi
+
+local_settings.py
+
+*.swap
+*.swp
+
+venv/

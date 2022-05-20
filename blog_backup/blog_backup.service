@@ -1,0 +1,21 @@
+[Unit]
+Description=dgideas.net blog backup service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=on-failure
+RestartSec=60s
+WorkingDirectory=/opt/blog_deployment
+Environment=PYTHONPATH=/opt/blog_deployment/
+Environment=BACKUP_S3_ENDPOINT=
+Environment=BACKUP_S3_KEY_ID=
+Environment=BACKUP_S3_ACCESS_KEY=
+Environment=BACKUP_BUCKET_NAME=
+Environment=BACKUP_KEY_PREFIX=wordpress_db_
+Environment=BACKUP_DB_NAME=wordpress
+ExecStart=/bin/bash -c "source blog_backup/venv/bin/activate && python3 src/wordgene/services/gpt_query_service.py"
+
+[Install]
+WantedBy=multi-user.target

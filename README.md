@@ -11,6 +11,9 @@ dgideas.net use these tech stack on May, 2022:
 | Web Server | nginx | from `apt install` |
 | Database | MariaDB | from `api install` |
 
+Service registered on this server:
+* blog_backup: see `/blog_backup`
+
 ### nginx configure
 ```
 ##
