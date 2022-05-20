@@ -90,3 +90,7 @@ server {
 * Cloudflare: hide origin server ip address & proxy/cache/deliver webpage content & https security layer
 * DGClouds OSS: host image & video attachment in blog article
 * Wasabi: backup data
+
+### Cloudflare
+* an unpublished domain with `*.dgclouds.net`, which we could ssh on to server
+* `dgideas.net`, `dgideas.blog` and `www.dgideas.net` which people can access blog by these url(s)
