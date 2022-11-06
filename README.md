@@ -2,17 +2,22 @@
 dgideas.net is @DGideas' personal blog. This document describe the architecture of the server behind dgideas.net, 3rd party service configuration method which the blog used and provide some useful maintance scripts which dgideas.net daily used.
 
 ## Server Configuration
-dgideas.net use these tech stack on May, 2022:
+dgideas.net use these tech stack on Nov, 2022:
 
 | Concept Layer | Used Component | Extra Info |
 | --- | --- | --- |
-| OS | Ubuntu 20.04 LTS | TODO: upgrade to 22.04 |
+| OS | Ubuntu 22.04 LTS | |
 | Blog Platform | WordPress | the newest version |
 | Web Server | nginx | from `apt install` |
 | Database | MariaDB | from `api install` |
 
 Service registered on this server:
 * blog_backup: see `/blog_backup`
+
+### Initialize environment
+```bash
+sudo apt install php-fpm mariadb-server
+```
 
 ### nginx configure
 ```
