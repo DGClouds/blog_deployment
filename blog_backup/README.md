@@ -9,6 +9,7 @@ This backup service automatically backup necessary files on:
 1. clone the whole repo to `~`, and move the directory into `/opt`(need sudo right)
 
 2. change environment variables on blog_backup.service:
+
 | env | description | example |
 | --- | --- | --- |
 | `BACKUP_S3_ENDPOINT` | S3 compatible service endpoint | |
